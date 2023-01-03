@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0](https://github.com/justtrackio/terraform-aws-sns-topic/compare/v1.0.0...v1.1.0) (2023-01-03)
+
+
+### Features
+
+* Lowered required terraform version to more realistic value ([#2](https://github.com/justtrackio/terraform-aws-sns-topic/issues/2)) ([5be801a](https://github.com/justtrackio/terraform-aws-sns-topic/commit/5be801ad6aa710b03d436c412d18425ed9557a4b))
+
 ## 1.0.0 (2022-12-09)
 
 

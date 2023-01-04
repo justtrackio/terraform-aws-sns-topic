@@ -17,6 +17,10 @@ module "alarm_label" {
 resource "aws_sns_topic" "main" {
   name = local.sns_topic
   tags = module.this.tags
+
+  sqs_failure_feedback_role_arn    = var.sqs_failure_feedback_role_arn
+  sqs_success_feedback_role_arn    = var.sqs_success_feedback_role_arn
+  sqs_success_feedback_sample_rate = var.sqs_success_feedback_sample_rate
 }
 
 data "aws_iam_policy_document" "policy" {

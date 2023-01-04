@@ -49,3 +49,21 @@ variable "principals_with_subscribe_permission" {
   description = "ARNs of accounts that are allowed to subscribe e.g. \"arn:aws:iam::123456789123:root\""
   default     = []
 }
+
+variable "sqs_failure_feedback_role_arn" {
+  type        = string
+  description = "ARN for sqs failure logging, requires [\"logs:CreateLogGroup\", \"logs:CreateLogStream\", \"logs:PutLogEvents\", \"logs:PutMetricFilter\", \"logs:PutRetentionPolicy\"],]"
+  default     = null
+}
+
+variable "sqs_success_feedback_role_arn" {
+  type        = string
+  description = "ARN for sqs success logging, requires [\"logs:CreateLogGroup\", \"logs:CreateLogStream\", \"logs:PutLogEvents\", \"logs:PutMetricFilter\", \"logs:PutRetentionPolicy\"],]"
+  default     = null
+}
+
+variable "sqs_success_feedback_sample_rate" {
+  type        = number
+  description = "Percentage of how many samples to take"
+  default     = null
+}

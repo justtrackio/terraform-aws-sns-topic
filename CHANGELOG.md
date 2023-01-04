@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0](https://github.com/justtrackio/terraform-aws-sns-topic/compare/v1.1.0...v1.2.0) (2023-01-04)
+
+
+### Features
+
+* Added sqs delivery feedback ([#3](https://github.com/justtrackio/terraform-aws-sns-topic/issues/3)) ([0fdc064](https://github.com/justtrackio/terraform-aws-sns-topic/commit/0fdc064c4670df9a51fef0fd0a436f669efb05a0))
+
 ## [1.1.0](https://github.com/justtrackio/terraform-aws-sns-topic/compare/v1.0.0...v1.1.0) (2023-01-03)
 
 

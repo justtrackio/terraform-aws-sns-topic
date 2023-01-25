@@ -18,6 +18,7 @@ module "example2" {
 
   name                                 = "my-topic"
   attributes                           = ["test2"]
-  principals_with_subscribe_permission = ["123456789123"]
+  principals_with_subscribe_permission = ["arn:aws:iam::123456789123:root"]
+  principals_with_publish_permission   = ["arn:aws:iam::123456789123:root"]
   alarm_topic_arn                      = module.alarm.topic_arn
 }

@@ -25,7 +25,7 @@ resource "aws_sns_topic" "main" {
 
 data "aws_iam_policy_document" "policy" {
   statement {
-    sid    = "default-account-access"
+    sid    = "default-account-permissions"
     effect = "Allow"
     principals {
       identifiers = ["*"]
@@ -52,13 +52,27 @@ data "aws_iam_policy_document" "policy" {
   dynamic "statement" {
     for_each = length(var.principals_with_subscribe_permission) > 0 ? [1] : []
     content {
-      sid    = "external-account-access"
+      sid    = "principals-with-subscribe-permission"
       effect = "Allow"
       principals {
         identifiers = var.principals_with_subscribe_permission
         type        = "AWS"
       }
       actions   = ["SNS:Subscribe"]
+      resources = [aws_sns_topic.main.arn]
+    }
+  }
+
+  dynamic "statement" {
+    for_each = length(var.principals_with_publish_permission) > 0 ? [1] : []
+    content {
+      sid    = "principals-with-publish-permission"
+      effect = "Allow"
+      principals {
+        identifiers = var.principals_with_publish_permission
+        type        = "AWS"
+      }
+      actions   = ["SNS:Publish"]
       resources = [aws_sns_topic.main.arn]
     }
   }

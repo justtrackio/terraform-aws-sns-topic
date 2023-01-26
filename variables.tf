@@ -44,6 +44,12 @@ variable "alarm_topic_arn" {
   default     = null
 }
 
+variable "principals_with_publish_permission" {
+  type        = list(string)
+  description = "ARNs of accounts that are allowed to publish messages e.g. \"arn:aws:iam::123456789123:root\""
+  default     = []
+}
+
 variable "principals_with_subscribe_permission" {
   type        = list(string)
   description = "ARNs of accounts that are allowed to subscribe e.g. \"arn:aws:iam::123456789123:root\""

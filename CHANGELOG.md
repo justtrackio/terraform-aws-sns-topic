@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.0](https://github.com/justtrackio/terraform-aws-sns-topic/compare/v1.2.0...v1.3.0) (2023-01-26)
+
+
+### Features
+
+* add support for publish action from defined principals ([#12](https://github.com/justtrackio/terraform-aws-sns-topic/issues/12)) ([5be35c5](https://github.com/justtrackio/terraform-aws-sns-topic/commit/5be35c5ad8fb67eaf6779fd65f0990ffc3464bd4))
+
 ## [1.2.0](https://github.com/justtrackio/terraform-aws-sns-topic/compare/v1.1.0...v1.2.0) (2023-01-04)
 
 

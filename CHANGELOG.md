@@ -1,3 +1,10 @@
+## [1.4.0](https://github.com/justtrackio/terraform-aws-sns-topic/compare/v1.3.0...v1.4.0) (2023-03-29)
+
+
+### Features
+
+* add_alarm_description_json ([#17](https://github.com/justtrackio/terraform-aws-sns-topic/issues/17)) ([92bd554](https://github.com/justtrackio/terraform-aws-sns-topic/commit/92bd554395fa1849932a27cc10b355879c3ed4e0))
+
 # Changelog
 
 All notable changes to this project will be documented in this file.

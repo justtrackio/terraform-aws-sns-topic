@@ -18,7 +18,7 @@ resource "aws_cloudwatch_metric_alarm" "sns_success_rate" {
     Severity    = "warning"
     Description = local.alarm_description
   }, module.this.tags, module.this.additional_tag_map))
-  alarm_name          = "${module.alarm_label.id}-${join("", module.this.attributes)}-sns-success-rate"
+  alarm_name          = "${module.this.id}-sns-success-rate"
   comparison_operator = "LessThanThreshold"
   datapoints_to_alarm = var.alarm_datapoints_to_alarm
   evaluation_periods  = var.alarm_evaluation_periods

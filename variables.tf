@@ -43,11 +43,13 @@ variable "alarm_topic_arn" {
 variable "aws_account_id" {
   type        = string
   description = "AWS Account ID"
+  default     = ""
 }
 
 variable "aws_region" {
   type        = string
   description = "AWS Region"
+  default     = ""
 }
 
 variable "principals_with_publish_permission" {

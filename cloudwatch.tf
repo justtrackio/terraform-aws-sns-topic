@@ -2,15 +2,6 @@ locals {
   alarm_description = var.alarm_description != null ? var.alarm_description : "SNS Topic Dashboard: https://${var.aws_region}.console.aws.amazon.com/sns/v3/home?region=${var.aws_region}#/topic/arn:aws:sns:${var.aws_region}:${var.aws_account_id}:${module.this.id}"
 }
 
-module "alarm_label" {
-  source  = "cloudposse/label/null"
-  version = "0.25.0"
-
-  context = module.this.context
-
-  label_order = var.label_orders.cloudwatch
-}
-
 resource "aws_cloudwatch_metric_alarm" "sns_success_rate" {
   count = var.alarm_create ? 1 : 0
 

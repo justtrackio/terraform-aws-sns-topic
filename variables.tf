@@ -81,11 +81,3 @@ variable "sqs_success_feedback_sample_rate" {
   description = "Percentage of how many samples to take"
   default     = null
 }
-
-variable "label_orders" {
-  type = object({
-    cloudwatch = optional(list(string))
-  })
-  default     = {}
-  description = "Overrides the `labels_order` for the different labels to modify ID elements appear in the `id`"
-}

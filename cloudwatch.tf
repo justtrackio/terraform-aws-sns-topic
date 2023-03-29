@@ -2,15 +2,6 @@ locals {
   alarm_description = var.alarm_description != null ? var.alarm_description : "SNS Topic Dashboard: https://${var.aws_region}.console.aws.amazon.com/sns/v3/home?region=${var.aws_region}#/topic/arn:aws:sns:${var.aws_region}:${var.aws_account_id}:${module.this.id}"
 }
 
-module "alarm_label" {
-  source  = "cloudposse/label/null"
-  version = "0.25.0"
-
-  context = module.this.context
-
-  label_order = var.label_orders.cloudwatch
-}
-
 resource "aws_cloudwatch_metric_alarm" "sns_success_rate" {
   count = var.alarm_create ? 1 : 0
 
@@ -18,7 +9,7 @@ resource "aws_cloudwatch_metric_alarm" "sns_success_rate" {
     Severity    = "warning"
     Description = local.alarm_description
   }, module.this.tags, module.this.additional_tag_map))
-  alarm_name          = "${module.alarm_label.id}-${join("", module.this.attributes)}-sns-success-rate"
+  alarm_name          = "${module.this.id}-sns-success-rate"
   comparison_operator = "LessThanThreshold"
   datapoints_to_alarm = var.alarm_datapoints_to_alarm
   evaluation_periods  = var.alarm_evaluation_periods

@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/justtrackio/terraform-aws-sns-topic/compare/v1.4.0...v1.4.1) (2023-03-29)
+
+
+### Bug Fixes
+
+* adjust cloudwatch alarm name ([#18](https://github.com/justtrackio/terraform-aws-sns-topic/issues/18)) ([45335b6](https://github.com/justtrackio/terraform-aws-sns-topic/commit/45335b6675e3972a662eee1214481ca2aa1de4a6))
+
 ## [1.4.0](https://github.com/justtrackio/terraform-aws-sns-topic/compare/v1.3.0...v1.4.0) (2023-03-29)
 
 

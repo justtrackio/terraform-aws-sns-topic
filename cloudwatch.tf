@@ -1,5 +1,5 @@
 locals {
-  alarm_description = var.alarm_description != null ? var.alarm_description : "SNS Topic Dashboard: https://${var.aws_region}.console.aws.amazon.com/sns/v3/home?region=${var.aws_region}#/topic/arn:aws:sns:${var.aws_region}:${var.aws_account_id}:${module.this.id}"
+  alarm_description = var.alarm_description != null ? var.alarm_description : "SNS Topic Dashboard: https://${module.this.aws_region}.console.aws.amazon.com/sns/v3/home?region=${module.this.aws_region}#/topic/arn:aws:sns:${module.this.aws_region}:${module.this.aws_account_id}:${module.this.id}"
 }
 
 resource "aws_cloudwatch_metric_alarm" "sns_success_rate" {

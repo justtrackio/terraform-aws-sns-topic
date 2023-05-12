@@ -28,7 +28,7 @@ data "aws_iam_policy_document" "policy" {
     resources = [aws_sns_topic.main.arn]
     condition {
       test     = "StringEquals"
-      values   = [var.aws_account_id]
+      values   = [module.this.aws_account_id]
       variable = "AWS:SourceOwner"
     }
   }

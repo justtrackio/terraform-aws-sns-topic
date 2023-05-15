@@ -40,18 +40,6 @@ variable "alarm_topic_arn" {
   default     = null
 }
 
-variable "aws_account_id" {
-  type        = string
-  description = "AWS Account ID"
-  default     = ""
-}
-
-variable "aws_region" {
-  type        = string
-  description = "AWS Region"
-  default     = ""
-}
-
 variable "principals_with_publish_permission" {
   type        = list(string)
   description = "ARNs of accounts that are allowed to publish messages e.g. \"arn:aws:iam::123456789123:root\""

@@ -1,3 +1,10 @@
+## [1.5.0](https://github.com/justtrackio/terraform-aws-sns-topic/compare/v1.4.1...v1.5.0) (2023-05-15)
+
+
+### Features
+
+* update_context_versions_variables_outputs ([#22](https://github.com/justtrackio/terraform-aws-sns-topic/issues/22)) ([4d3d19f](https://github.com/justtrackio/terraform-aws-sns-topic/commit/4d3d19f3adf41cf852365dc4734b58efca76bd72))
+
 ## [1.4.1](https://github.com/justtrackio/terraform-aws-sns-topic/compare/v1.4.0...v1.4.1) (2023-03-29)
 
 

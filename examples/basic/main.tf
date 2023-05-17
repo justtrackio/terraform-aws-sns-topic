@@ -9,7 +9,7 @@ module "alarm" {
   aws_account_id = local.aws_account_id
   aws_region     = local.aws_region
   name           = "myalarmtopic"
-  alarm_create   = false
+  alarm_enabled  = false
 }
 
 module "example1" {

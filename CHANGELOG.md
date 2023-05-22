@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/justtrackio/terraform-aws-sns-topic/compare/v1.5.0...v1.5.1) (2023-05-22)
+
+
+### Bug Fixes
+
+* adjust alarm toggle variable ([#25](https://github.com/justtrackio/terraform-aws-sns-topic/issues/25)) ([356bf2d](https://github.com/justtrackio/terraform-aws-sns-topic/commit/356bf2d68f48988211797a24ba0250f8ad6baa4a))
+
 ## [1.5.0](https://github.com/justtrackio/terraform-aws-sns-topic/compare/v1.4.1...v1.5.0) (2023-05-15)
 
 

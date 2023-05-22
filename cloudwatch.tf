@@ -3,7 +3,7 @@ locals {
 }
 
 resource "aws_cloudwatch_metric_alarm" "sns_success_rate" {
-  count = var.alarm_create ? 1 : 0
+  count = var.alarm_enabled ? 1 : 0
 
   alarm_description = jsonencode(merge({
     Severity    = "warning"

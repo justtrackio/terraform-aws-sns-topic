@@ -1,5 +1,6 @@
 locals {
   alarm_description = var.alarm_description != null ? var.alarm_description : "SNS Topic Dashboard: https://${module.this.aws_region}.console.aws.amazon.com/sns/v3/home?region=${module.this.aws_region}#/topic/arn:aws:sns:${module.this.aws_region}:${module.this.aws_account_id}:${module.this.id}"
+  alarm_topic_arn   = var.alarm_topic_arn != null ? var.alarm_topic_arn : "arn:aws:sns:${module.this.aws_region}:${module.this.aws_account_id}:${module.this.environment}-alarms"
 }
 
 resource "aws_cloudwatch_metric_alarm" "sns_success_rate" {
@@ -54,6 +55,6 @@ resource "aws_cloudwatch_metric_alarm" "sns_success_rate" {
     return_data = true
   }
 
-  alarm_actions = [var.alarm_topic_arn]
-  ok_actions    = [var.alarm_topic_arn]
+  alarm_actions = [local.alarm_topic_arn]
+  ok_actions    = [local.alarm_topic_arn]
 }

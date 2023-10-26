@@ -1,3 +1,10 @@
+## [1.6.0](https://github.com/justtrackio/terraform-aws-sns-topic/compare/v1.5.1...v1.6.0) (2023-10-26)
+
+
+### Features
+
+* add alarm topic arn convention ([#34](https://github.com/justtrackio/terraform-aws-sns-topic/issues/34)) ([c15eabd](https://github.com/justtrackio/terraform-aws-sns-topic/commit/c15eabd8339890a9ee50198f615cacf9c69b7e2b))
+
 ## [1.5.1](https://github.com/justtrackio/terraform-aws-sns-topic/compare/v1.5.0...v1.5.1) (2023-05-22)
 
 
